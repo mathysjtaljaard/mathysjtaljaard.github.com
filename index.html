@@ -1,5 +1,30 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
+	<head>
+		<title>Welcome</title>
+		
+		<!-- load the Aloha Editor core and some plugins -->
+              <script src="http://cdn.aloha-editor.org/current/lib/aloha.js"
+                                   data-aloha-plugins="common/format,
+                                                        common/list,
+                                                        common/link,
+                                                        common/highlighteditables">
+              </script>
+               
+              <!-- load the Aloha Editor CSS styles -->
+              <link href="http://cdn.aloha-editor.org/current/css/aloha.css" rel="stylesheet" type="text/css" />
+ 
+              <!-- make all elements with class="editable" editable with Aloha Editor -->
+              <script type="text/javascript">
+                     Aloha.ready( function() {
+                            var $ = Aloha.jQuery;
+                            $('.editable').aloha();
+                     });
+              </script>
+	<head>
+	<body>
+	
+	<body>
    <h1>Welcome</h1>
    <h3>try again</h3> 
 </html>
