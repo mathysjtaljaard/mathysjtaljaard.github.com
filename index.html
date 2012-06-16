@@ -1,68 +1,58 @@
 <!DOCTYPE HTML>
 
 <html lang="en">
-			<head>
-						<title>Welcome</title>
-						<meta name="viewport" content="width=device-width, initial-scale=1.0">
-						<link href="css/bootstrap.css" rel="stylesheet">
-						<link href="css/bootstrap-responsive.css" rel="stylesheet">
-    				<style type="text/css">
-      						 body {
-       			 			 padding-top: 60px;
-        		 			 padding-bottom: 40px;
-     				  		 }
-   					</style>
-    				<link href="css/bootstrap-responsive.css" rel="stylesheet">
-			</head>
+	<head>
+		<title>Welcome</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/bootstrap-responsive.css" rel="stylesheet">
+		<style type="text/css">
+			 body {
+				padding-top: 60px;
+				padding-bottom: 40px;
+			 }
+		</style>
+		<link href="css/bootstrap-responsive.css" rel="stylesheet">
+		
+		<script language="text/javascript">
+			$(document).ready(function() 
+			{
+				alert("Ready");
+			});
+		</script>
+	</head>
+	
+	
 
-			<body>
-						<div class="navbar navbar-fixed-top">
-								 <div class="navbar-inner">
-								 			<a class="brand">Resource Page</a>
+	<body>
+		<div class="navbar navbar-fixed-top">
+			 <div class="navbar-inner">
+				<a class="brand">Taljaard Exploration</a>
+				<ul class="nav">
+					<li class="active"><a href="#"><i class="icon-home icon-white"></i> Home</a></li>
+					<li class="dropdown">
+						<a data-target="#" class="dropdown-toggle" data-toggle="dropdown"> Links <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="http://technic.lego.com/en-us/Default.aspx">Lego Technic</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
 
-											<ul class="nav">
-													<li class="active"><a href="#"><i class="icon-home icon-white"></i> Home</a></li>
-													<li class="dropdown">
-                    			<a data-target="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                    			<ul class="dropdown-menu">
-                      				<li><a href="#">Action</a></li>
-                      				<li><a href="#">Another action</a></li>
-                      				<li><a href="#">Something else here</a></li>
-                      				<li class="divider"></li>
-                      				<li><a href="#">Separated link</a></li>
-                      		</ul>
-                  				</li>
-											</ul>
-								 </div>
-						</div>
-
-						<br/>
-
-						<ul class="nav">
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li class="divider"></li>
-                      <li><a href="#">Separated link</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown 2 <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li class="divider"></li>
-                      <li><a href="#">Separated link</a></li>
-                    </ul>
-                  </li>
-                </ul>
-
-						<script src="js/jquery.js"></script>
-						<script src="js/bootstrap.js"></script>
-
-			</body>
+		
+		<div id="formDiv" class="span3">
+			<form class="form-inline well" id="inputFrm">
+				<input type="text" id="inputTxt" placeholder="Enter string (ex: Hello all) " class="span2"/>
+				<input class="btn btn-primary " type="button" value="Enter" class="span1"/>
+			</form>
+		</div>
+			
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.js"></script>
+	</body>
 </html>

@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+			<head>
+						<title>Welcome</title>
+						<meta name="viewport" content="width=device-width, initial-scale=1.0">
+						<link href="css/bootstrap.css" rel="stylesheet">
+						<link href="css/bootstrap-responsive.css" rel="stylesheet">
+						
+    				<style type="text/css">
+      						 body {
+       			 			 padding-top: 60px;
+        		 			 padding-bottom: 40px;
+     				  		 }
+   					</style>
+    				<link href="css/bootstrap-responsive.css" rel="stylesheet">
+			</head>
+			
+			<script language="JavaScript">
+				function calculate() {
+					var salary=document.calculator.formTable.salary.value;
+					var units=document.calculator.formTable.units.selectedIndex;
+					var week=0;
+					
+					if(units==0) {
+						week=salary*2400;
+					} else if(units==1) {
+						week=salary*40;
+					} else if(units==2) {
+						week=salary*5;
+					} else if(units==3) {
+						week=salary;
+					} else if(units==4) {
+						week=salary/4;
+					} else if(units==5) {
+						week=salary/52;
+					}
+					
+					document.calculator.formTable.minuteDisplay.value=week/2400;
+					document.calculator.formTable.hourDisplay.value=week/40;
+					document.calculator.formTable.dayDisplay.value=week/5;
+					document.calculator.formTable.weekDisplay.value=week;
+					document.calculator.formTable.monthDisplay.value=week*4;
+					document.calculator.formTable.biMonthlyDisplay.value=week*2;
+					document.calculator.formTable.yearDisplay.value=week*52;
+				}
+			</script>
+			<body>
+						<div class="navbar navbar-fixed-top" style="filter:none">
+							 <div class="navbar-inner">
+										<a class="brand">Resource Page</a>
+
+										<ul class="nav">
+												<li class="active"><a href="#"><i class="icon-home icon-white"></i> Home</a></li>
+												<li class="dropdown">
+							<a data-target="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Separated link</a></li>
+							</ul>
+							</li>
+										</ul>
+							 </div>
+						</div>
+
+				<div class="row">
+					<div class="span12">
+						<form class="well offset3 span6">
+							<legend style="text-align:center;">Salary Calculator</legend>
+							<label class="span1" for="wageAmount">Wages</label>
+							<input type="text" name="wageAmount" placeholder="Enter Wage Amount Here">
+						</form>
+					</div>
+				
+				<div class="span6"> </div>
+				<div class="containter span6">
+					<form name="calculator">
+						<table name="formTable" class="table table-rounded table-bordered table-striped">
+							<thead>
+								<tr>
+									<th><h3>Salary Calculator</h3></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Salary Amount : </td>
+									<td><span class="add-on"> $ </span><input class="span2" id="inputSalary" type="text" name="salary">	</td>
+								</tr>
+								<tr>
+									<td>Select Salary Unit : </td>
+									<td>
+										<select name="units" class="span2">
+										<option>minute</option>
+										<option selected>hour</option>
+										<option>day</option>
+										<option>week</option>
+										<option>month</option>
+										<option>year</option>
+										</select>	
+									</td>
+								</tr>
+								<tr>
+									<td> </td>
+									<td><input type="button" class="btn btn-primary" value="Calculate Salary" onClick="calculate()"></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><h3>Results</h3></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><label name="minuteDisplay" size="6" onFocus="this.blur();"></label></td>
+									<td> per minute</td>	
+								</tr>
+								<tr>
+									<td><input type="text" name="hourDisplay" size="6" onFocus="this.blur();"></td>
+									<td> per hour</td>
+								</tr>
+								<tr>
+									<td><input type="text" name="dayDisplay" size="6" onFocus="this.blur();"></td>
+									<td>per day</td>
+								</tr>
+								<tr>
+									<td><input type="text" name="weekDisplay" size="6" onFocus="this.blur();"></td>
+									<td>per week</td>
+								</tr>
+								<tr>
+									<td><input type="text" name="biMonthlyDisplay" size="6" onFocus="this.blur();"></td>
+									<td>bi-monthly</td>
+								</tr>
+								<tr>
+									<td><input type="text" name="monthDisplay" size="6" onFocus="this.blur();"></td>
+									<td>per month</td>
+								</tr>
+								<tr>
+									<td><input type="text" name="yearDisplay" size="6" onFocus="this.blur();"></td>
+									<td> per year</td>
+								</tr>
+							</tbody>
+						</table>
+					</form>
+				</div>
+				</div>
+				<div class="span4 well">
+					
+						<div class="row span3">
+							<div class="control-group">
+								<label class="control-label" for="inputSalary"><b>Salary</b></label>
+								<span class="add-on"> $ </span><input class="span2" id="inputSalary" type="text" name="salary" size="12">	
+							</div>
+						</div>
+						<div class="row span3">
+							per <select span="span3" name="units">
+								<option>minute</option>
+								<option selected>hour</option>
+								<option>day</option>
+								<option>week</option>
+								<option>month</option>
+								<option>year</option>
+							</select>
+							
+							<br/><br/>
+							
+							<input type="button" class="btn btn-primary" value="Calculate Salary" onClick="calculate()">
+							
+							<br/><br/>
+							
+						  <span class="indent span6"><br>
+						  $<input type="text" name="minuteDisplay" size="6" onFocus="this.blur();"> per minute<br>
+						  $<input type="text" name="hourDisplay" size="6" onFocus="this.blur();"> per hour<br>
+						  $<input type="text" name="dayDisplay" size="6" onFocus="this.blur();"> per day<br>
+						  $<input type="text" name="weekDisplay" size="6" onFocus="this.blur();"> per week<br>
+						  $<input type="text" name="biMonthlyDisplay" size="6" onFocus="this.blur();"> bi-monthly<br>
+						  $<input type="text" name="monthDisplay" size="6" onFocus="this.blur();"> per month<br>
+						  $<input type="text" name="yearDisplay" size="6" onFocus="this.blur();"> per year<br>
+						  </span>
+						</div>
+					</form>
+				</div>
+				
+						<script src="js/jquery.js"></script>
+						<script src="js/bootstrap.js"></script>
+
+			</body>
+</html>
